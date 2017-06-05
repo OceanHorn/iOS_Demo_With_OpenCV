@@ -25,12 +25,12 @@
         cv::cvtColor(cvImage, gray, CV_RGBA2GRAY);
         // Apply Gaussian filter to remove small edges
         cv::GaussianBlur(gray, gray, cv::Size(5, 5), 1.2, 1.2);
-//        // Calculate edges with Canny
+        // Calculate edges with Canny
         cv::Mat edges;
         cv::Canny(gray, edges, 0, 50);
-//        // Fill image with white color
+        // Fill image with white color
         cvImage.setTo(cv::Scalar::all(255));
-//        // Change color on edges
+        // Change color on edges
         cvImage.setTo(cv::Scalar(0, 128, 255, 255), edges);
         // Convert cv::Mat to UIImage* and show the resulting image
         image = MatToUIImage(cvImage);
