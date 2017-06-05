@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIImage+FaceDetect.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self setupUIComponents];
+}
+
+- (void)setupUIComponents {
+    UIImage *image = [UIImage imageNamed:@"face.jpeg"];
+    image = [UIImage detectFace:image];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.width * 10.0 / 16)];
+    imageView.image = image;
+    [self.view addSubview:imageView];
 }
 
 
