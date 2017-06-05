@@ -13,6 +13,7 @@
 		FE8C32241EE58B1500D55BDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8C32221EE58B1500D55BDB /* Main.storyboard */; };
 		FE8C32261EE58B1500D55BDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE8C32251EE58B1500D55BDB /* Assets.xcassets */; };
 		FE8C32291EE58B1500D55BDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE8C32271EE58B1500D55BDB /* LaunchScreen.storyboard */; };
+		FE8C32321EE58CCE00D55BDB /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE8C32311EE58CCE00D55BDB /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		FE8C32251EE58B1500D55BDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE8C32281EE58B1500D55BDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE8C322A1EE58B1500D55BDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE8C32301EE58C8200D55BDB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FE8C32311EE58CCE00D55BDB /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE8C32321EE58CCE00D55BDB /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +68,8 @@
 				FE8C32201EE58B1500D55BDB /* ViewController.m */,
 				FE8C32221EE58B1500D55BDB /* Main.storyboard */,
 				FE8C32251EE58B1500D55BDB /* Assets.xcassets */,
+				FE8C32301EE58C8200D55BDB /* PrefixHeader.pch */,
+				FE8C32311EE58CCE00D55BDB /* opencv2.framework */,
 				FE8C32271EE58B1500D55BDB /* LaunchScreen.storyboard */,
 				FE8C322A1EE58B1500D55BDB /* Info.plist */,
 				FE8C32191EE58B1500D55BDB /* Supporting Files */,
@@ -274,6 +280,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5MYF7DDCMK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = OpenCVDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = OpenCVDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GuoYufu.OpenCVDemo;
@@ -286,6 +297,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5MYF7DDCMK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = OpenCVDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = OpenCVDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GuoYufu.OpenCVDemo;
@@ -312,6 +328,7 @@
 				FE8C322F1EE58B1500D55BDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
