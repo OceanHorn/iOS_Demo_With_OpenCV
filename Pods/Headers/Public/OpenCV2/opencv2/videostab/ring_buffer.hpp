@@ -1,0 +1,1 @@
+../../../../../OpenCV2/opencv2.framework/Versions/A/Headers/videostab/ring_buffer.hpp
